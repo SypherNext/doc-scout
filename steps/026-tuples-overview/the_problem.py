@@ -1,0 +1,3 @@
+def predict(text):
+    # ... inference ...
+    return "positive", 0.92, 0.034

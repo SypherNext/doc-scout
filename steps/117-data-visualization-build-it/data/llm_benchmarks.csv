@@ -1,0 +1,9 @@
+model_name,accuracy,latency_ms,cost_per_1k_tokens
+claude-opus-4,0.927,2850,0.0150
+claude-sonnet-4,0.908,1450,0.0030
+claude-haiku-4,0.861,620,0.0008
+gpt-5,0.919,2600,0.0125
+gpt-5-mini,0.887,980,0.0025
+gpt-4o,0.895,1200,0.0050
+gpt-4o-mini,0.849,540,0.0006
+o3-mini,0.902,3200,0.0110

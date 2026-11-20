@@ -1,0 +1,28 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+*.egg-info/
+
+# Local settings and data: never commit these
+.env
+app/rag_db/
+app/cache/
+app/logs/
+
+# Stray matplotlib output from running a DataViz step's script with the
+# wrong working directory -- real chart images belong inside their own
+# numbered step folder, never loose at steps/ root.
+/steps/*.png
+
+# Editors and systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

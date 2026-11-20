@@ -1,0 +1,1 @@
+bash setup_project.sh my_first_ai_project

@@ -1,0 +1,26 @@
+# Non-secret defaults for the research assistant service.
+# Secrets (ANTHROPIC_API_KEY, OPENAI_API_KEY, AUTH_TOKEN) are never put here:
+# they only ever come from environment variables / a .env file, and from
+# there into the Docker container via `docker run --env-file` or Compose.
+
+chroma_path: "./rag_db"
+collection_name: "rag_docs"
+cache_dir: "./cache"
+cache_ttl_seconds: 3600
+log_dir: "./logs"
+
+# Chunking (see the RAG lesson's chunk_text()). 500/100 is the course's own
+# starting point: small enough for granular retrieval, large enough that a
+# chunk still reads as a coherent passage.
+chunk_size: 500
+chunk_overlap: 100
+
+# Retrieval
+top_k: 3
+
+# Models
+anthropic_model: "claude-sonnet-4-20250514"
+embedding_model: "text-embedding-3-small"
+
+# Web server
+port: 8000

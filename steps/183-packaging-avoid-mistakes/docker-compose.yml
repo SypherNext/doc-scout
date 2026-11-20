@@ -1,0 +1,17 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - ./rag_db:/app/rag_db # Persist the Chroma vector store across restarts
+      - ./cache:/app/cache # Persist the query cache across restarts
+      - ./logs:/app/logs # Keep DEBUG-level file logs on the host
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s

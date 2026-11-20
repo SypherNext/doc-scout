@@ -1,0 +1,4 @@
+model,accuracy,f1_score,latency_ms
+gpt-4,0.94,0.92,1200
+claude-3,0.93,0.91,1800
+llama-3,0.89,0.87,900
